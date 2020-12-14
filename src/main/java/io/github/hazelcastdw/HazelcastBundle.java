@@ -38,6 +38,13 @@ public abstract class HazelcastBundle<T extends Configuration> implements Config
 
     public abstract CacheConfig getCacheConfig(T configuration);
 
+    /**
+     * if you are wondering, How should I use Guice (or any other injector) inside my bundle?
+     * Well, don't! The accidental complexity of an injector inside a cohesive bundle is not balanced by reduced overall complexity.
+     * Long answer, read here : https://blog.osgi.org/2014/09/how-should-i-use-guicespringblueprint.html
+     *
+     *
+     */
     public abstract ServiceInjector getServiceInjector(T configuration);
 
     public abstract String[] getHandlerPackages(T configuration);
