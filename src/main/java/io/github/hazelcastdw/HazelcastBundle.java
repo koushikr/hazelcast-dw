@@ -3,19 +3,14 @@ package io.github.hazelcastdw;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.hazelcast.config.Config;
-import com.hazelcast.config.MapConfig;
-import com.hazelcast.map.MapLoader;
 import io.dropwizard.Configuration;
 import io.dropwizard.ConfiguredBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import io.github.hazelcastdw.cache.Cache;
 import io.github.hazelcastdw.cache.CacheManager;
 import io.github.hazelcastdw.cache.MapperUtils;
 import io.github.hazelcastdw.cache.ServiceInjector;
 import io.github.hazelcastdw.config.CacheConfig;
-import io.github.hazelcastdw.config.HazelcastMapConfig;
 import lombok.NoArgsConstructor;
 
 /*
